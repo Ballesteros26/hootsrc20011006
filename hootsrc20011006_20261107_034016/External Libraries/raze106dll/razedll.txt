@@ -1,0 +1,33 @@
+RazeDll
+    Benjamin Green <benjamin@lh.co.nz>
+    v1.0 - 23 June 2001
+    http://www.lh.co.nz/
+
+RazeDll is a simple encapsulation of Raze (the excellent Z80
+emulator) as a DLL. This should allow straightforward use of
+Raze from any Windows compiler.
+
+Raze function definitions for Borland Delphi are included. Note
+that the dll isn't delphi-specific in any way; however delphi
+compatibility was the reason for creating razedll in the first
+place.
+
+Running make.bat should rebuild everything if you feel the need
+to modify the source. Otherwise, the supplied raze.dll should
+be all you need.
+
+The following were used to create RazeDll:
+
+Alink
+    Anthony A.J. Williams
+    v1.6
+    http://anthonyw.cjb.net/
+
+Nasm
+    v0.98
+    http://nasm.2y.net/
+
+Raze
+    v1.05
+    Richard Mitton
+    http://etc.home.dhs.org/raze/
