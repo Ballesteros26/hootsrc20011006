@@ -1,0 +1,108 @@
+# -----------------------------------------------------------------------------
+# 工作流：解压并合并分卷/分片压缩包
+# - 识别 _part1/_part2...、_vol1、.part1 等分卷命名，归并为同一组
+# - 同组所有分卷解压到同一个文件夹（同名根目录自动合并）
+# - 非分卷的普通压缩包仍解压到各自独立的同名文件夹
+# - 每个分卷独立处理：成功的删除并暂存，失败的跳过继续，可后续重推续接
+# -----------------------------------------------------------------------------
+
+name: 自动解压并合并分卷压缩包
+on:
+  push:
+    branches: [ main, master, GM82 ]
+    paths:
+      - '**.zip'
+      - '**.7z'
+      - '**.rar'
+      - '**.tar'
+      - '**.tar.gz'
+      - '**.tgz'
+      - '**.tar.bz2'
+      - '**.tar.xz'
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract_all_archives:
+    runs-on: ubuntu-22.04
+    if: github.actor != 'github-actions[bot]'
+    concurrency:
+      group: extract-archives-${{ github.ref }}
+      cancel-in-progress: false
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装解压依赖
+        run: sudo apt-get update -y && sudo apt-get install -y p7zip-full unrar
+
+      - name: 查找、归组、解压合并、暂存并删除压缩包
+        run: |
+          mapfile -t ARCHIVES < <(find . -type f -not -path './.git/*' | grep -iE '\.(zip|7z|rar|tar\.gz|tar\.bz2|tar\.xz|tar|tgz)$' | sort)
+          if [ "${#ARCHIVES[@]}" -eq 0 ]; then echo "未找到压缩文件。"; exit 0; fi
+          echo "找到 ${#ARCHIVES[@]} 个压缩文件，开始归组..."
+          declare -A GROUP_MAP
+          for FILE in "${ARCHIVES[@]}"; do
+            [ -f "$FILE" ] || continue
+            DIR="$(dirname "$FILE")"
+            NAME="$(basename "$FILE")"
+            BASE="$(echo "$NAME" | sed -E 's/\.(tar\.(gz|bz2|xz)|tgz|zip|7z|rar)$//i')"
+            GBASE="$(echo "$BASE" | sed -E 's/([._-](part|pt|vol)[0-9]{1,3})$//i')"
+            GROUP_MAP["$DIR/$GBASE"]+="$FILE"$'\n'
+            echo "  归组: $FILE  ->  $DIR/$GBASE"
+          done
+          mapfile -t GKEYS < <(printf '%s\n' "${!GROUP_MAP[@]}" | sed '/^$/d' | sort)
+          TOTAL_FAIL=0
+          for GKEY in "${GKEYS[@]}"; do
+            mapfile -t PARTS < <(printf '%s' "${GROUP_MAP[$GKEY]}" | sed '/^$/d')
+            DEST="$GKEY"
+            mkdir -p "$DEST"
+            echo "=== 解压组 (${#PARTS[@]} 个分卷) -> $DEST ==="
+            OKCNT=0
+            for FILE in "${PARTS[@]}"; do
+              [ -f "$FILE" ] || continue
+              LOWER="$(echo "$(basename "$FILE")" | tr '[:upper:]' '[:lower:]')"
+              echo "  -> $FILE"
+              case "$LOWER" in
+                *.zip) unzip -oq "$FILE" -d "$DEST" && RET=0 || RET=1 ;;
+                *.7z) 7z x "$FILE" -o"$DEST" -y -bso0 -bsp0 && RET=0 || RET=1 ;;
+                *.rar) unrar x -o+ -idq "$FILE" "$DEST/" && RET=0 || RET=1 ;;
+                *.tar.gz|*.tgz) tar -xzf "$FILE" -C "$DEST" && RET=0 || RET=1 ;;
+                *.tar.bz2) tar -xjf "$FILE" -C "$DEST" && RET=0 || RET=1 ;;
+                *.tar.xz) tar -xJf "$FILE" -C "$DEST" && RET=0 || RET=1 ;;
+                *.tar) tar -xf "$FILE" -C "$DEST" && RET=0 || RET=1 ;;
+                *) echo "     未知格式，跳过"; RET=1 ;;
+              esac
+              if [ "$RET" -eq 0 ]; then
+                echo "     解压成功，删除原分卷。"
+                rm "$FILE"
+                git add "$FILE"
+                OKCNT=$((OKCNT + 1))
+              else
+                echo "     解压失败，保留该分卷，继续处理其余分卷。"
+                TOTAL_FAIL=$((TOTAL_FAIL + 1))
+              fi
+            done
+            if [ "$OKCNT" -gt 0 ]; then
+              echo "  -> 暂存合并目录: $DEST"
+              git add --force "$DEST"
+            fi
+            rmdir "$DEST" 2>/dev/null || true
+          done
+          echo "=== 全部处理完毕，失败分卷数: $TOTAL_FAIL ==="
+
+      - name: 提交变动
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --staged --quiet; then
+            git commit -m "Chore: 自动解压并合并分卷压缩包"
+            git pull --rebase origin main
+            git push
+          else
+            echo "没有文件变动需要提交。"
+          fi
