@@ -1,0 +1,406 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: hoot - Win32 TunePre--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\czys_\AppData\Local\Temp\RSPB02B.tmp" with contents
+[
+/nologo /MT /W3 /GR /GX /O2 /Ob2 /I ".\\" /I ".\zlib" /I ".\libpng" /I ".\fftw" /I ".\mame\cpu" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D INLINE="static __inline" /Fp"TunePre/hoot.pch" /YX /Fo"TunePre/" /Fd"TunePre/" /FD /P /c 
+"C:\Users\czys_\Desktop\hootsrc20011006\hoot.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\MainFrm.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\ssBindConfig.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\ssConfig.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\ssConfigLoader.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\ssDisplay.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\ssDriverBinder.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\ssDriverConfig.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\ssDriverRegister.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\ssFft.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\ssFile.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\ssFolder.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\ssSoundChip.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\ssSoundDriverManager.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\ssSoundStream.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\ssTimer.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\ssTimerManager.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\ssUnZip.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\mame\cpu\m6809\m6809.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\mame\cpu\m6800\m6800.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\mame\cpu\m68000\m68kcpu.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\mame\cpu\m68000\m68kmame.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\mame\cpu\m68000\m68kopac.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\mame\cpu\m68000\m68kopdm.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\mame\cpu\m68000\m68kopnz.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\mame\cpu\m68000\m68kops.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\mame\cpu\h6280\h6280.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\mame\cpu\cpuintrf.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\mame\sound\es5506.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\mame\sound\fakemame.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\mame\sound\fmopl.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ss005289.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ss007232.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ss051649.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ss053260.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ss054539.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssADPCM.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssAY8910.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssC140.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssC30.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssFMTimer.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssMemoryDump.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssMono2151.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssMSM6258V.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssMSM6295.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssPCEPSG.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssPCM8.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssQSound.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssSEGAPCM.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssSEGAPCM2.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssSN76496.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssStereo2151.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssTaito2610.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssYM2151.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssYM2203.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssYM2413.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssYM2608.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssYM2610.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssYM3438.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\sound\ssYM3812.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\angelus.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\ds4.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\ed2.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\firehawk.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\hes.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\kss.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\midgarts.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\mistyblue.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\mucom2608.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\mucom88.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\mucomx1.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\mxdrv.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\revolter.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\scc.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\scheme.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\silpheed.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\snatcher.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\starcruiser.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\starship.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\tnmbox.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\trpscr.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\x68k.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\xtalsoft.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\drivers\zavas.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\codeguru\HyperLink.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\m88\fmtimer.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\zlib\adler32.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\zlib\compress.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\zlib\crc32.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\zlib\deflate.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\zlib\infblock.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\zlib\infcodes.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\zlib\inffast.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\zlib\inflate.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\zlib\inftrees.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\zlib\infutil.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\zlib\maketree.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\zlib\trees.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\zlib\uncompr.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\zlib\unzip.c"
+"C:\Users\czys_\Desktop\hootsrc20011006\zlib\zutil.c"
+]
+Creating command line "cl.exe @C:\Users\czys_\AppData\Local\Temp\RSPB02B.tmp" 
+Creating temporary file "C:\Users\czys_\AppData\Local\Temp\RSPB02C.tmp" with contents
+[
+/nologo /MT /W3 /GR /GX /O2 /Ob2 /I ".\\" /I ".\zlib" /I ".\libpng" /I ".\fftw" /I ".\mame\cpu" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D INLINE="static __inline" /Fp"TunePre/hoot.pch" /Yc"stdafx.h" /Fo"TunePre/" /Fd"TunePre/" /FD /P /c 
+"C:\Users\czys_\Desktop\hootsrc20011006\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\czys_\AppData\Local\Temp\RSPB02C.tmp" 
+Creating temporary file "C:\Users\czys_\AppData\Local\Temp\RSPB02D.tmp" with contents
+[
+/nologo /MT /W3 /GR /GX /O2 /Ob2 /I ".\\" /I ".\zlib" /I ".\libpng" /I ".\fftw" /I ".\mame\cpu" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D INLINE="static __inline" /Fo"TunePre/" /Fd"TunePre/" /FD /P /c 
+"C:\Users\czys_\Desktop\hootsrc20011006\ms\ddutil.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\m88\file.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\m88\fmgen.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\m88\opm.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\m88\opna.cpp"
+"C:\Users\czys_\Desktop\hootsrc20011006\m88\psg.cpp"
+]
+Creating command line "cl.exe @C:\Users\czys_\AppData\Local\Temp\RSPB02D.tmp" 
+Creating temporary file "C:\Users\czys_\AppData\Local\Temp\RSPB04D.tmp" with contents
+[
+/nologo /MT /W3 /GR /GX /O2 /Ob2 /I ".\\" /I ".\zlib" /I ".\libpng" /I ".\fftw" /I ".\mame\cpu" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /Fp"TunePre/hoot.pch" /YX /Fo"TunePre/" /Fd"TunePre/" /FD /P /c 
+"C:\Users\czys_\Desktop\hootsrc20011006\emu2413\emu2413.c"
+]
+Creating command line "cl.exe @C:\Users\czys_\AppData\Local\Temp\RSPB04D.tmp" 
+Creating temporary file "C:\Users\czys_\AppData\Local\Temp\RSPB04E.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"TunePre/hoot.pdb" /machine:I386 /out:"TunePre/hoot.exe" /libpath:".\zlib" /libpath:".\libpng" /libpath:".\fftw" 
+.\TunePre\hoot.obj
+.\TunePre\MainFrm.obj
+.\TunePre\ssBindConfig.obj
+.\TunePre\ssConfig.obj
+.\TunePre\ssConfigLoader.obj
+.\TunePre\ssDisplay.obj
+.\TunePre\ssDriverBinder.obj
+.\TunePre\ssDriverConfig.obj
+.\TunePre\ssDriverRegister.obj
+.\TunePre\ssFft.obj
+.\TunePre\ssFile.obj
+.\TunePre\ssFolder.obj
+.\TunePre\ssSoundChip.obj
+.\TunePre\ssSoundDriverManager.obj
+.\TunePre\ssSoundStream.obj
+.\TunePre\ssTimer.obj
+.\TunePre\ssTimerManager.obj
+.\TunePre\ssUnZip.obj
+.\TunePre\StdAfx.obj
+.\TunePre\m6809.obj
+.\TunePre\m6800.obj
+.\TunePre\m68kcpu.obj
+.\TunePre\m68kmame.obj
+.\TunePre\m68kopac.obj
+.\TunePre\m68kopdm.obj
+.\TunePre\m68kopnz.obj
+.\TunePre\m68kops.obj
+.\TunePre\h6280.obj
+.\TunePre\cpuintrf.obj
+.\TunePre\es5506.obj
+.\TunePre\fakemame.obj
+.\TunePre\fmopl.obj
+.\raze\raze.obj
+.\TunePre\ss005289.obj
+.\TunePre\ss007232.obj
+.\TunePre\ss051649.obj
+.\TunePre\ss053260.obj
+.\TunePre\ss054539.obj
+.\TunePre\ssADPCM.obj
+.\TunePre\ssAY8910.obj
+.\TunePre\ssC140.obj
+.\TunePre\ssC30.obj
+.\TunePre\ssFMTimer.obj
+.\TunePre\ssMemoryDump.obj
+.\TunePre\ssMono2151.obj
+.\TunePre\ssMSM6258V.obj
+.\TunePre\ssMSM6295.obj
+.\TunePre\ssPCEPSG.obj
+.\TunePre\ssPCM8.obj
+.\TunePre\ssQSound.obj
+.\TunePre\ssSEGAPCM.obj
+.\TunePre\ssSEGAPCM2.obj
+.\TunePre\ssSN76496.obj
+.\TunePre\ssStereo2151.obj
+.\TunePre\ssTaito2610.obj
+.\TunePre\ssYM2151.obj
+.\TunePre\ssYM2203.obj
+.\TunePre\ssYM2413.obj
+.\TunePre\ssYM2608.obj
+.\TunePre\ssYM2610.obj
+.\TunePre\ssYM3438.obj
+.\TunePre\ssYM3812.obj
+.\TunePre\angelus.obj
+.\TunePre\ds4.obj
+.\TunePre\ed2.obj
+.\TunePre\firehawk.obj
+.\TunePre\hes.obj
+.\TunePre\kss.obj
+.\TunePre\midgarts.obj
+.\TunePre\mistyblue.obj
+.\TunePre\mucom2608.obj
+.\TunePre\mucom88.obj
+.\TunePre\mucomx1.obj
+.\TunePre\mxdrv.obj
+.\TunePre\revolter.obj
+.\TunePre\scc.obj
+.\TunePre\scheme.obj
+.\TunePre\silpheed.obj
+.\TunePre\snatcher.obj
+.\TunePre\starcruiser.obj
+.\TunePre\starship.obj
+.\TunePre\tnmbox.obj
+.\TunePre\trpscr.obj
+.\TunePre\x68k.obj
+.\TunePre\xtalsoft.obj
+.\TunePre\zavas.obj
+.\TunePre\ddutil.obj
+.\TunePre\HyperLink.obj
+.\TunePre\file.obj
+.\TunePre\fmgen.obj
+.\TunePre\fmtimer.obj
+.\TunePre\opm.obj
+.\TunePre\opna.obj
+.\TunePre\psg.obj
+.\TunePre\emu2413.obj
+.\TunePre\adler32.obj
+.\TunePre\compress.obj
+.\TunePre\crc32.obj
+.\TunePre\deflate.obj
+.\TunePre\infblock.obj
+.\TunePre\infcodes.obj
+.\TunePre\inffast.obj
+.\TunePre\inflate.obj
+.\TunePre\inftrees.obj
+.\TunePre\infutil.obj
+.\TunePre\maketree.obj
+.\TunePre\trees.obj
+.\TunePre\uncompr.obj
+.\TunePre\unzip.obj
+.\TunePre\zutil.obj
+.\TunePre\hoot.res
+]
+Creating command line "link.exe @C:\Users\czys_\AppData\Local\Temp\RSPB04E.tmp"
+<h3>Output Window</h3>
+Compiling...
+Command line warning D4002 : ignoring unknown option '/Ob2'
+StdAfx.cpp
+Compiling...
+Command line warning D4002 : ignoring unknown option '/Ob2'
+hoot.cpp
+MainFrm.cpp
+ssBindConfig.cpp
+ssConfig.cpp
+ssConfigLoader.cpp
+C:\Users\czys_\Desktop\hootsrc20011006\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+ssDisplay.cpp
+ssDriverBinder.cpp
+C:\Users\czys_\Desktop\hootsrc20011006\ssDriverBinder.cpp(10) : fatal error C1083: Cannot open type library file: 'MSXML.DLL': No such file or directory
+ssDriverConfig.cpp
+C:\Users\czys_\Desktop\hootsrc20011006\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+ssDriverRegister.cpp
+ssFft.cpp
+ssFile.cpp
+ssFolder.cpp
+ssSoundChip.cpp
+ssSoundDriverManager.cpp
+C:\Users\czys_\Desktop\hootsrc20011006\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+ssSoundStream.cpp
+ssTimer.cpp
+ssTimerManager.cpp
+ssUnZip.cpp
+C:\Users\czys_\Desktop\hootsrc20011006\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+m6809.c
+m6800.c
+m68kcpu.c
+m68kmame.c
+m68kopac.c
+m68kopdm.c
+m68kopnz.c
+m68kops.c
+h6280.c
+cpuintrf.c
+es5506.c
+fakemame.cpp
+fmopl.c
+ss005289.cpp
+ss007232.cpp
+ss051649.cpp
+ss053260.cpp
+ss054539.cpp
+ssADPCM.cpp
+ssAY8910.cpp
+ssC140.cpp
+ssC30.cpp
+ssFMTimer.cpp
+ssMemoryDump.cpp
+ssMono2151.cpp
+ssMSM6258V.cpp
+ssMSM6295.cpp
+ssPCEPSG.cpp
+ssPCM8.cpp
+ssQSound.cpp
+ssSEGAPCM.cpp
+ssSEGAPCM2.cpp
+ssSN76496.cpp
+ssStereo2151.cpp
+ssTaito2610.cpp
+ssYM2151.cpp
+.\m88/fmgen.h(9) : fatal error C1083: Cannot open include file: 'common.h': No such file or directory
+ssYM2203.cpp
+.\m88/fmgen.h(9) : fatal error C1083: Cannot open include file: 'common.h': No such file or directory
+ssYM2413.cpp
+.\emu2413/emu2413.h(4) : fatal error C1083: Cannot open include file: 'stdint.h': No such file or directory
+ssYM2608.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+ssYM2610.cpp
+.\m88/fmgen.h(9) : fatal error C1083: Cannot open include file: 'common.h': No such file or directory
+ssYM3438.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+ssYM3812.cpp
+angelus.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+ds4.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+ed2.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+firehawk.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+hes.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+kss.cpp
+.\emu2413/emu2413.h(4) : fatal error C1083: Cannot open include file: 'stdint.h': No such file or directory
+midgarts.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+mistyblue.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+mucom2608.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+mucom88.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+mucomx1.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+mxdrv.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+revolter.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+scc.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+scheme.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+silpheed.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+snatcher.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+starcruiser.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+starship.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+tnmbox.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+trpscr.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+x68k.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+xtalsoft.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+zavas.cpp
+.\ssUnZip.h(4) : fatal error C1083: Cannot open include file: 'unzip.h': No such file or directory
+HyperLink.cpp
+fmtimer.cpp
+C:\Users\czys_\Desktop\hootsrc20011006\m88\fmtimer.cpp(7) : fatal error C1083: Cannot open include file: 'common.h': No such file or directory
+adler32.c
+compress.c
+crc32.c
+deflate.c
+infblock.c
+infcodes.c
+inffast.c
+inflate.c
+inftrees.c
+infutil.c
+maketree.c
+trees.c
+uncompr.c
+fatal error C1083: Cannot open source file: 'C:\Users\czys_\Desktop\hootsrc20011006\zlib\uncompr.c': No such file or directory
+unzip.c
+zutil.c
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+hoot.exe - 37 error(s), 2 warning(s)
+</pre>
+</body>
+</html>
